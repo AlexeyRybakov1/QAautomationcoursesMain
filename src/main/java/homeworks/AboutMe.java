@@ -1,4 +1,4 @@
-package src.src.java.classworks;
+package homeworks;
 
 public class AboutMe {
     public static void main(String[] args){

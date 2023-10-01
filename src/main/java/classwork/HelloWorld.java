@@ -1,4 +1,4 @@
-package src.src.java.classworks;
+package classwork;
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello world");

@@ -1,4 +1,4 @@
-package src.src.java.classworks;
+package classwork;
 public class Practice {
     public static void main(String[] args) {
         int dayNum = 4;

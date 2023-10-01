@@ -1,9 +1,9 @@
-package src.src.java.classworks;
+package classwork;
 public class test {
 
     public static void main(String[] args) {
-        String firstName = "Алексей";
-        String lastName = "Рыбаков";
+        String firstName = "Alexey";
+        String lastName = "Rybakov";
         String fullName1 = firstName + " " + lastName;
         System.out.println(fullName1);
         
@@ -16,7 +16,7 @@ public class test {
         String fullName4 = lastName.concat(", ").concat(firstName);
         System.out.println(fullName4);
 
-        String prefix = "Мистер"; // Здесь вы можете изменить префикс на нужный
+        String prefix = "Mr.";
         String fullNameWithPrefix = prefix + " " + firstName + " " + lastName;
         System.out.println(fullNameWithPrefix);
 
