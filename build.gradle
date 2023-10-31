@@ -1,2 +1,15 @@
 apply plugin: 'java'
 apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium WebDriver
+    implementation 'org.seleniumhq.selenium:selenium-java:4.11.0'
+    implementation 'org.seleniumhq.selenium:selenium-firefox-driver:4.14.1'
+
+    // WebDriverManager
+    implementation 'io.github.bonigarcia:webdrivermanager:5.5.3'
+}
