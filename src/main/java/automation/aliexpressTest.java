@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.List;
 
 import static java.lang.Thread.sleep;
-public class AliexpressTest {
+public class aliexpressTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.firefoxdriver().setup();
         WebDriver driver = new FirefoxDriver();
