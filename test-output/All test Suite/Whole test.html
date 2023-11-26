@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Whole test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Nov 19 13:19:25 EET 2023</td>
+<td>Started on:</td><td>Sat Nov 25 13:08:57 EET 2023</td>
 </tr>
-<tr><td>Total time:</td><td>15 seconds (15498 ms)</td>
+<tr><td>Total time:</td><td>19 seconds (19478 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,133 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='sauceDemo.tests.ViewProductTest.successfulProductOpenCheck()'><b>successfulProductOpenCheck</b><br>Test class: sauceDemo.tests.ViewProductTest</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a id=&quot;item_4_title_link&quot; href=&quot;#&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [82ce099f-0a2f-49b9-916f-385db801c930, clickElement {id=d0028e24-d265-4dbf-adfe-5ffdd03410eb}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0, moz:accessibilityChecks: false, moz:buildID: 20231116134553, moz:debuggerAddress: 127.0.0.1:42162, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 28276, moz:profile: C:\Users\aleks\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:42162/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (82ce099f-0a2f-49b9-916f-385db801c930)] -&gt; id: item_4_title_link]
+Session ID: 82ce099f-0a2f-49b9-916f-385db801c930
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at sauceDemo.pages.HomePage.openProduct(HomePage.java:25)
+	at sauceDemo.tests.ViewProductTest.successfulProductOpenCheck(ViewProductTest.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace678801430", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace678801430'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;a id=&quot;item_4_title_link&quot; href=&quot;#&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.14.1&apos;, revision: &apos;03f8ede370&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8.1&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [82ce099f-0a2f-49b9-916f-385db801c930, clickElement {id=d0028e24-d265-4dbf-adfe-5ffdd03410eb}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 120.0, moz:accessibilityChecks: false, moz:buildID: 20231116134553, moz:debuggerAddress: 127.0.0.1:42162, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 28276, moz:profile: C:\Users\aleks\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:42162/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on windows (82ce099f-0a2f-49b9-916f-385db801c930)] -&gt; id: item_4_title_link]
+Session ID: 82ce099f-0a2f-49b9-916f-385db801c930
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at sauceDemo.pages.HomePage.openProduct(HomePage.java:25)
+	at sauceDemo.tests.ViewProductTest.successfulProductOpenCheck(ViewProductTest.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</pre></div></td>
+<td>0</td>
+<td>sauceDemo.tests.ViewProductTest@17c386de</td></tr>
+<tr>
+<td title='sauceDemo.tests.FleeceJacketTest.productPageOpenCheck()'><b>productPageOpenCheck</b><br>Test class: sauceDemo.tests.FleeceJacketTest</td>
+<td><div><pre>java.lang.NoSuchMethodError: &apos;boolean sauceDemo.pages.HomePage.isAllProductPageOpened()&apos;
+	at sauceDemo.tests.FleeceJacketTest.productPageOpenCheck(FleeceJacketTest.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197855654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace197855654'><pre>java.lang.NoSuchMethodError: &apos;boolean sauceDemo.pages.HomePage.isAllProductPageOpened()&apos;
+	at sauceDemo.tests.FleeceJacketTest.productPageOpenCheck(FleeceJacketTest.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+</pre></div></td>
+<td>0</td>
+<td>sauceDemo.tests.FleeceJacketTest@2aece37d</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +202,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='homeworks.janisrozetest.testJanisRoze()'><b>testJanisRoze</b><br>Test class: homeworks.janisrozetest</td>
+<td title='sauceDemo.tests.LoginTest.successfulLoginCheck()'><b>successfulLoginCheck</b><br>Test class: sauceDemo.tests.LoginTest</td>
 <td></td>
-<td>13</td>
-<td>homeworks.janisrozetest@8e0379d</td></tr>
+<td>0</td>
+<td>sauceDemo.tests.LoginTest@548a102f</td></tr>
+<tr>
+<td title='sauceDemo.tests.AboutTest.aboutTestPageCheck()'><b>aboutTestPageCheck</b><br>Test class: sauceDemo.tests.AboutTest</td>
+<td></td>
+<td>2</td>
+<td>sauceDemo.tests.AboutTest@7f9fcf7f</td></tr>
+<tr>
+<td title='sauceDemo.tests.ShoppingCartTest.successfulCartOpenCheck()'><b>successfulCartOpenCheck</b><br>Test class: sauceDemo.tests.ShoppingCartTest</td>
+<td></td>
+<td>0</td>
+<td>sauceDemo.tests.ShoppingCartTest@5762806e</td></tr>
 </table><p>
 </body>
 </html>
