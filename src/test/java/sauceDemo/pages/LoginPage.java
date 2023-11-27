@@ -6,25 +6,23 @@ import org.testng.Assert;
 import org.openqa.selenium.WebElement;
 
 public class LoginPage {
+    WebDriver driver;
 
-    private WebDriver driver;
-    private String loginFieldId = "user-name";
-    private String passwordFieldId = "password";
-    private String loginButtonId = "login-button";
+    String loginFieldId = "user-name";
+    String passwordFieldId = "password";
+    String loginButtonId = "login-button";
 
+     public LoginPage(WebDriver driver){
+         this.driver = driver;
+     }
 
-    public LoginPage(WebDriver driver){
+    public void login(){
+         WebElement loginField = driver.findElement(By.id(loginFieldId));
+         WebElement passwordField = driver.findElement(By.id(passwordFieldId));
+         WebElement loginButton = driver.findElement(By.id(loginButtonId));
 
-        this.driver=driver;
-    }
-
-    public void login(String login, String password){
-        WebElement loginField = driver.findElement(By.id(loginFieldId));
-        WebElement passwordField = driver.findElement(By.id(passwordFieldId));
-        WebElement loginButton = driver.findElement(By.id(loginButtonId));
-
-        loginField.sendKeys(login);
-        passwordField.sendKeys(password);
+        loginField.sendKeys("standard_user");
+        passwordField.sendKeys("secret_sauce");
         loginButton.click();
 
     }
