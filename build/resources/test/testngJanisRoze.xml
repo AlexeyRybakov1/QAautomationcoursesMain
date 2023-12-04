@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test Suite">
+    <test name="Whole test">
+        <packages>
+            <package name="janisRoze.tests"/>
+        </packages>
+    </test> <!-- Test -->
+    <listeners>
+        <listener class-name="org.testng.reporters.TestHTMLReporter"/>
+    </listeners>
+</suite> <!-- Suite -->
+
