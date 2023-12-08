@@ -11,6 +11,6 @@ public class GramatasPage {
     }
 
     public void navigatetoGramatas() {
-        driver.get("https://www.janisroze.lv/lv/gramatas.html");
+        driver.get("https://www.janisroze.lv/lv/gramatas.html"); //have a problem with latvian language, so link...
     }
 }
