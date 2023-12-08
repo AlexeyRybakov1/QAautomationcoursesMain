@@ -5,30 +5,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.time.Duration;
+
 public class LoginPage {
 
-    WebDriver driver;
-    String username = "aleksuser3@gmail.com";
-    String password = "k4ry!GHU9cv!t.c";
+    private WebDriver driver;
 
-
+    By emailLocator = By.id("email");
+    By passwordLocator = By.id("pass");
+    By loginButtonLocator = By.xpath("//span[text()='Ielogoties']");
+    By successMessageLocator = By.xpath("//h3[text()='Manas klienta kartes']");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void login() {
-        WebElement emailField = driver.findElement(By.id("email"));
-        WebElement passwordField = driver.findElement(By.id("pass"));
-        WebElement loginButton = driver.findElement(By.xpath("//span[text()='Ielogoties']"));
+    public void login(String username, String password) {
+        WebElement emailField = driver.findElement(emailLocator);
+        WebElement passwordField = driver.findElement(passwordLocator);
+        WebElement loginButton = driver.findElement(loginButtonLocator);
 
         emailField.sendKeys(username);
         passwordField.sendKeys(password);
         loginButton.click();
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement someElementOnNextPage = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//h3[text()='Manas klienta kartes']")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(successMessageLocator));
     }
-
-
 }
