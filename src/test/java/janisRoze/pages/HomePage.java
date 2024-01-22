@@ -1,31 +1,27 @@
 package janisRoze.pages;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 public class HomePage {
+    WebDriver driver;
 
-    private WebDriver driver;
-
-    By profileIconLocator = By.xpath("//ul[@class='account-dropdown long']");
-    By loginLinkLocator = By.xpath("//a[@title='Ielogoties']");
+    String profileLinkXpath = "//ul[@class='account-dropdown long']";
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void navigateToHomePage() {
-        driver.get("https://www.janisroze.lv/lv/");
-    }
+    public void goToLoginPage(){
+        Actions action = new Actions(driver);
+        WebElement profileLink = driver.findElement(By.xpath(profileLinkXpath));
+        WebElement ielogotiesDDItem = driver.findElement(By.xpath("//a[@title='Ielogoties']"));
 
-    public void navigateToLoginPage() {
-        WebElement profileIcon = driver.findElement(profileIconLocator);
-        Actions actions = new Actions(driver);
-        actions.moveToElement(profileIcon).build().perform();
-
-        WebElement ielogotiesDDItem = driver.findElement(loginLinkLocator);
+        action.moveToElement(profileLink).build().perform();
         ielogotiesDDItem.click();
+
     }
 }

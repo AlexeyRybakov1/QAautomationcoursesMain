@@ -14,6 +14,7 @@ public class BaseTest {
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.get("https://www.janisroze.lv/");
+        driver.manage().window().maximize();
     }
 
 

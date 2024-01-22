@@ -3,34 +3,30 @@ package janisRoze.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class LoginPage {
 
-    private WebDriver driver;
+    WebDriver driver;
+    String emailInputId = "email";
+    String passwordInputId = "pass";
+    String loginButtonId = "send2";
 
-    By emailLocator = By.id("email");
-    By passwordLocator = By.id("pass");
-    By loginButtonLocator = By.xpath("//span[text()='Ielogoties']");
-    By successMessageLocator = By.xpath("//h3[text()='Manas klienta kartes']");
-
-    public LoginPage(WebDriver driver) {
+    public LoginPage(WebDriver driver){
         this.driver = driver;
     }
 
-    public void login(String username, String password) {
-        WebElement emailField = driver.findElement(emailLocator);
-        WebElement passwordField = driver.findElement(passwordLocator);
-        WebElement loginButton = driver.findElement(loginButtonLocator);
+    public Boolean isOpen(){
+        WebElement emailInput = driver.findElement(By.id("email"));
+        if (emailInput.isDisplayed()) return true;
+        else return false;
+    }
+    public void login(){
+        WebElement emailField = driver.findElement(By.id(emailInputId));
+        WebElement passwordField = driver.findElement(By.id(passwordInputId));
+        WebElement loginButton = driver.findElement(By.id(loginButtonId));
 
-        emailField.sendKeys(username);
-        passwordField.sendKeys(password);
+        emailField.sendKeys("aleksuser3@gmail.com");
+        passwordField.sendKeys("k4ry!GHU9cv!t.c");
         loginButton.click();
-
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.presenceOfElementLocated(successMessageLocator));
     }
 }

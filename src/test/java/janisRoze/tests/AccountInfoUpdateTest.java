@@ -6,9 +6,9 @@ import janisRoze.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class LoginTest extends BaseTest {
-    @Test(priority = 1)
-    public void successfulLogin() {
+public class AccountInfoUpdateTest extends BaseTest{
+    @Test(priority = 2)
+    public void successfulAccountInfoUpdate() {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         AccountPage accountPage = new AccountPage(driver);
@@ -18,5 +18,10 @@ public class LoginTest extends BaseTest {
 
         loginPage.login();
         Assert.assertTrue(accountPage.isOpen());
+
+        accountPage.openEditAccountInfoForm();
+
+        accountPage.updateAccountInfo();
+        Assert.assertTrue(accountPage.isUpdated());
     }
 }

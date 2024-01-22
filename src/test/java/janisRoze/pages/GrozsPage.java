@@ -11,18 +11,26 @@ import java.time.Duration;
 
 public class GrozsPage {
     private WebDriver driver;
+    private WebDriverWait wait;
+    private Actions actions;
 
     public GrozsPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.actions = new Actions(driver);
     }
 
     public void goToCart() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement cartIcon = driver.findElement(By.xpath("//span[text()='Grozs']"));
-        Actions actions = new Actions(driver);
+        WebElement cartIcon = driver.findElement(By.xpath("//span[.//span[@class='count']]"));
         actions.moveToElement(cartIcon).build().perform();
 
         WebElement pasutitButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='header-cart']/div/div[5]/button")));
         pasutitButton.click();
+    }
+
+    public String getProductNameInCart() {
+        By productNameLocator = By.xpath("//h3[@class='product-name']");
+        WebElement productNameInCart = wait.until(ExpectedConditions.visibilityOfElementLocated(productNameLocator));
+        return productNameInCart.getText();
     }
 }
