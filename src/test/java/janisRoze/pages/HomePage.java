@@ -10,6 +10,7 @@ public class HomePage {
     WebDriver driver;
 
     String profileLinkXpath = "//ul[@class='account-dropdown long']";
+    By ielagotiesButtonLocator = By.xpath("//a[@title='Ielogoties']");
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -18,10 +19,13 @@ public class HomePage {
     public void goToLoginPage(){
         Actions action = new Actions(driver);
         WebElement profileLink = driver.findElement(By.xpath(profileLinkXpath));
-        WebElement ielogotiesDDItem = driver.findElement(By.xpath("//a[@title='Ielogoties']"));
+        WebElement ielogotiesDDItem = driver.findElement(ielagotiesButtonLocator);
 
         action.moveToElement(profileLink).build().perform();
         ielogotiesDDItem.click();
 
+    }
+    public void navigatetoGramatas() {
+        driver.get("https://www.janisroze.lv/lv/gramatas.html");//can't do a xpath because Latvian language got bug in code
     }
 }

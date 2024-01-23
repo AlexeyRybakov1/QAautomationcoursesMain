@@ -4,8 +4,6 @@
         <packages>
             <package name="janisRoze.tests"/>
         </packages>
-        <parameter name="username" value="aleksuser3@gmail.com" />
-        <parameter name="password" value="k4ry!GHU9cv!t.c" />
     </test> <!-- Test -->
     <listeners>
         <listener class-name="org.testng.reporters.TestHTMLReporter"/>

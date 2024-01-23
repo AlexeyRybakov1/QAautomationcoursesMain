@@ -21,9 +21,7 @@ public class GramatasPage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void navigatetoGramatas() {
-        driver.get("https://www.janisroze.lv/lv/gramatas.html");
-    }
+
 
     public String getFirstBookName() {
         WebElement firstBookElement = driver.findElement(By.xpath("(//h2[@class='product-name'])[1]"));
